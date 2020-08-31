@@ -1,0 +1,6 @@
+syntax = "proto3";
+package protocol;
+
+message Read {
+    string read_val = 1;
+}

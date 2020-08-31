@@ -1,0 +1,6 @@
+syntax = "proto3";
+package protocol;
+
+message Write {
+    string write_val = 1;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package protocol;
+
+message Pong {
+    string pong_val = 1;
+}
