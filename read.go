@@ -10,6 +10,7 @@ import (
 	"github.com/maurodelazeri/gorilla-reconnect"
 )
 
+//带自动重连功能读消息
 func ReadMessageWithAutoConnect(c *recws.RecConn) (dst proto.Message, messageType []byte, err error) {
 	defer func() {
 		if exception := recover(); exception != nil {
@@ -34,6 +35,7 @@ func ReadMessageWithAutoConnect(c *recws.RecConn) (dst proto.Message, messageTyp
 	return decode(message)
 }
 
+//读消息
 func ReadMessage(c *websocket.Conn) (dst proto.Message, messageType []byte, err error) {
 	defer func() {
 		if exception := recover(); exception != nil {
